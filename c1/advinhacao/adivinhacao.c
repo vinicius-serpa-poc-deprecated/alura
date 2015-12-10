@@ -18,6 +18,8 @@ int main() {
 	int secretNumber;
 	int userSelection;
 	int i;
+	int acertou;
+	int maior;
 
 	// print the header game
 	printf("******************************************************\n");
@@ -34,21 +36,16 @@ int main() {
 		fflush(stdout);
 		scanf("%d", &userSelection);
 
-		printf("\nO numero %d é o chute.", userSelection);
+		acertou = userSelection == secretNumber;
+		maior = userSelection > secretNumber;
 
-		if (userSelection == secretNumber) {
-
+		if (acertou) {
 			printf("\nVocê acertou!");
 			break;
-
+		} else if (maior) {
+			printf("\nSeu chute foi maior que o número secreto!");
 		} else {
-
-			printf("\nNão foi dessa vez!");
-
-			if (userSelection > secretNumber)
-				printf("\nSeu chute foi maior que o número secreto!");
-			else
-				printf("\nSeu chute foi menor que o número secreto!");
+			printf("\nSeu chute foi menor que o número secreto!");
 		}
 
 	}
