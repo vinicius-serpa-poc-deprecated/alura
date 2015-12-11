@@ -36,6 +36,12 @@ int main() {
 		fflush(stdout);
 		scanf("%d", &userSelection);
 
+		if (userSelection < 0) {
+			printf("\nVocê não pode digitar números negativos!");
+			i--;
+			continue;
+		}
+
 		acertou = userSelection == secretNumber;
 		maior = userSelection > secretNumber;
 
