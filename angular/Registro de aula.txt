@@ -1,0 +1,30 @@
+NodeJS 4.2.4 foi instalado em C:/Program Files/nodejs
+
+Para baixar dependencias com node
+> npm install
+
+Para subir o servidor do node
+> npm start
+
+Express foi usado para criar endpoints REST
+NeDB, banco embutido feito totalmente em NodeJS
+
+Bloco de construção principal do Angular: Módulo
+
+Características do Angular
+- MVC
+- Objeto global Angular
+- Diretiva - Atributos que não existem no HTML (ng-app, ng-controller)
+- Angular Expression
+- One-way Data Bind através de $scope e angular expression
+
+Sintaxe Módulo
+
+angular.module('nomeModulo', []);	// criação de um novo módulo
+angular.module('nomeModulo');		// acesso a um modulo existente
+
+Sintaxe Controller
+
+// Um controller pode ser adicionado em modulo novo ou existente, com ou sem escopo
+angular.module('nomeModulo', []).controller('NomeController', function() { });
+angular.module('nomeModulo').controller('NomeController', function($scope) { });
